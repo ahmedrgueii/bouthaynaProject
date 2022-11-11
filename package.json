@@ -3,17 +3,16 @@
   "version": "1.0.0",
   "description": "test de git & gulp",
   "main": "index.js",
-  "dependencies": {},
-  "devDependencies": {
-        "del": "^6.0.0",
-        "gulp": "^4.0.2",
-        "gulp-beautify": "^3.0.0",
-        "gulp-nunjucks-render": "^2.2.3"
-  },
   "scripts": {
-	"start": "gulp",
-	"build": "gulp build"
+    "start": "gulp",
+    "build": "gulp build"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-beautify": "^3.0.0",
+    "gulp-nunjucks-render": "^2.2.3"
+  }
 }

@@ -1,0 +1,10 @@
+{% from 'atoms/button.html' import button %}
+{% from 'atoms/link.html' import link %}
+{% from 'atoms/paragraphe.html' import paragraphe %}
+
+<div class="card">
+    <h1>{{ title }}</h1>
+    {{ paragraphe(text) }}
+    {{ button('valider', 'btn btn-success') }} <br>
+    {{ link('readmore','test', '#', true) }}
+</div>

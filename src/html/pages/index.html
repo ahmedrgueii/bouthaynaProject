@@ -4,14 +4,14 @@
 
 {% extends "layouts/layout.html" %}
 
-{% import 'atoms/button.html' as atoms %}
-
 {% block content %}
     <div id="content">
         <div class="container">
             <h1>Hello World!</h1>
-
-            {{ atoms.button('test', 'btn btn-primary') }}
+            
+            {% set title = 'Home' %}
+            {% include "organisms/card.html" ignore missing %}
+            
         </div>
     </div>
 {% endblock %}

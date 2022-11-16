@@ -3,6 +3,7 @@
 {% set SEO_keywords = 'SSG, Nunjucks, Gulp, JavaScript' %}
 
 {% extends "layouts/layout.html" %}
+{% set active_page = "index" %}
 
 {% block content %}
     <div id="content">
@@ -11,7 +12,7 @@
             
             {% set title = 'Home' %}
             {% include "organisms/card.html" ignore missing %}
-            
+            {% include "organisms/card2.html" ignore missing %}
         </div>
     </div>
 {% endblock %}

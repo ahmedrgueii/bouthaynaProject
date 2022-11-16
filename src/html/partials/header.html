@@ -1,3 +1,23 @@
 <header>
-    <div class="container">header</div>
+    
+    {% set navigation_bar = [
+        {href: '/', id: 'index', caption: 'MAIN'},
+        {href: '/about_us/', id: 'about_us', caption: 'ABOUT US'},
+        {href: '/services/', id: 'services', caption: 'SERVICES'},
+        {href: '/appartements/', id: 'appartements', caption: 'APPARTEMENTS'},
+        {href: '/blog/', id: 'blog', caption: 'BLOG'},
+        {href: '/contacts/', id: 'contacts', caption: 'CONTACTS'}
+    ] %}    
+    <div class="container-fluid">
+        <nav>
+            <ul id="navigation">
+                {% for link in navigation_bar %}
+                <li{% if id == active_page %} class="active"{% endif
+                %}><a href="{{ link.href }}">{{ link.caption }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </nav>
+        
+    </div>
 </header>

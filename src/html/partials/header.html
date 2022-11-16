@@ -1,5 +1,4 @@
-<header>
-    
+<header class="c-header">
     {% set navigation_bar = [
         {href: '/', id: 'index', caption: 'MAIN'},
         {href: '/about_us/', id: 'about_us', caption: 'ABOUT US'},
@@ -7,17 +6,15 @@
         {href: '/appartements/', id: 'appartements', caption: 'APPARTEMENTS'},
         {href: '/blog/', id: 'blog', caption: 'BLOG'},
         {href: '/contacts/', id: 'contacts', caption: 'CONTACTS'}
-    ] %}    
-    <div class="container-fluid">
-        <nav>
-            <ul id="navigation">
-                {% for link in navigation_bar %}
-                <li{% if id == active_page %} class="active"{% endif
-                %}><a href="{{ link.href }}">{{ link.caption }}</a>
+    ] %}
+
+    <nav class="c-header__nav">
+        <ul class="c-header__items">
+            {% for link in navigation_bar %}
+                <li class="c-header__item {% if id == active_page %} active {% endif %}">
+                    <a href="{{ link.href }}">{{ link.caption }}</a>
                 </li>
-                {% endfor %}
-            </ul>
-        </nav>
-        
-    </div>
+            {% endfor %}
+        </ul>
+    </nav>
 </header>

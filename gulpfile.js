@@ -2,6 +2,7 @@ const { src, dest, series, watch } = require('gulp')
 const del = require('del')
 const njk = require('gulp-nunjucks-render')
 const beautify = require('gulp-beautify')
+const sass = require('gulp-sass')(require('sass'))
 
 function clean() {
   return del(['dist'])
@@ -18,9 +19,16 @@ function html() {
     .pipe(dest('dist'))
 }
 
+function buildStyles() {
+  return src('src/scss/pages/*.scss')
+    .pipe(sass().on('error', sass.logError))
+    .pipe(dest('dist/css'));
+}
+
 function watchFiles() {
+  watch('src/scss/**/*', buildStyles)
   watch('src/html/**/*', html)
 }
 
-exports.build = series(clean, html)
-exports.default = series(clean, html, watchFiles)
+exports.build = series(clean, html, buildStyles)
+exports.default = series(clean, html, buildStyles, watchFiles)

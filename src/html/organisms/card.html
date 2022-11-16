@@ -3,12 +3,11 @@
 {% from 'atoms/title.html' import title %}
 {% from 'atoms/paragraphe.html' import paragraphe %}
 
-{% macro card(title, description, bgcolor, btnName, btnLink) -%}
-<div class="card">
-    {{ title('h1', 'title') }} <br>
-    {{ paragraphe(description) }} <br>
-    {{ button('btnName', 'btn btn-success') }} <br>
-    {{ link('btnLink','test', '#', true) }}
-    
-</div>
+{% macro card(cardTitle, description, bgColor, btnName, btnLink = '#') -%}
+    <div class="card" style="border: 1px solid;">
+        {{ title('h1', cardTitle) }} <br>
+        {{ paragraphe(description) }} <br>
+        {{ button(btnName, 'btn btn-success') }} <br>
+        {{ link('btnLink', 'test', btnLink, true) }}
+    </div>
 {%- endmacro %}

@@ -4,12 +4,10 @@
 {% from 'atoms/paragraphe.html' import paragraphe %}
 
 {% macro card(cardtitle, description, bgcolor, btnName, btnLink) -%}
-<div class="col-md-3">
-    <div class="card">
-        {{ title('h1', cardtitle) }} <br> 
+    <div class="c-card col-md-3">
+        {{ title('h1', cardtitle) }} <br>
         {{ paragraphe(description) }} <br>
         {{ button(btnName, 'btn btn-success') }} <br>
         {{ link('btnLink','test', '#', true) }}
     </div>
-</div>
 {%- endmacro %}

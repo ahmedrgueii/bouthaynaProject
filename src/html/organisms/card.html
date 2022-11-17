@@ -1,0 +1,13 @@
+{% from 'atoms/button.html' import button %}
+{% from 'atoms/link.html' import link %}
+{% from 'atoms/title.html' import title %}
+{% from 'atoms/paragraphe.html' import paragraphe %}
+
+{% macro card(cardTitle, description, bgColor, btnName, btnLink = '#') -%}
+    <div class="card" style="border: 1px solid;">
+        {{ title('h1', cardTitle) }} <br>
+        {{ paragraphe(description) }} <br>
+        {{ button(btnName, 'btn btn-success') }} <br>
+        {{ link('btnLink', 'test', btnLink, true) }}
+    </div>
+{%- endmacro %}

@@ -1,0 +1,33 @@
+{% from 'atoms/title.html' import title %}
+{% from 'atoms/image.html' import image %}
+{% from 'atoms/button.html' import button %}
+{% from 'atoms/paragraphe.html' import paragraphe %}
+
+{% macro card2(cardTitle, description = '', btnName = '', subTitle = '', lists = '', imageSrc = '') -%}
+    <div class="card-2" style="border: 1px solid red;">
+        {{ title('h1', cardTitle) }} <br>
+        {% if subTitle != '' %}
+            {{ title('h2', 'subTitle') }} <br>
+        {% endif %}
+
+        {% if image-src != '' %}
+            {{ image('image-src', 'rounded float-left') }} <br>
+        {% endif %}
+
+        {{ paragraphe(description) }} <br>
+
+        {{ button(btnName, 'btn btn-success') }} <br>
+
+        {% if imageSrc != '' %}
+            {{ image(imageSrc, 'rounded float-left') }} <br>
+        {% endif %}
+
+        {% if lists != '' %}
+            <ul>
+                {% for list in lists %}
+                    <li>{{ list }}</li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+{%- endmacro %}

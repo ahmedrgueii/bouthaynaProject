@@ -1,0 +1,22 @@
+{% set page_name = 'Home' %}
+{% set class_name = 'homepage' %}
+{% set active_page = 'index' %}
+{% set SEO_description = 'SSG using Nunjucks and Gulp' %}
+{% set SEO_keywords = 'SSG, Nunjucks, Gulp, JavaScript' %}
+
+{% extends "layouts/layout.html" %}
+
+{% from 'atoms/title.html' import title %}
+{% from 'organisms/card.html' import card %}
+{% from 'organisms/card2.html' import card2 %}
+
+{% block content %}
+    <div id="content">
+        <div class="container">
+            {{ title('h1', 'Hello World !!') }}
+
+            {{ card('title', 'description', 'red', 'button') }}
+            {{ card2('title', 'description', 'button', 'subTitle', ['1', '2']) }}
+        </div>
+    </div>
+{% endblock %}

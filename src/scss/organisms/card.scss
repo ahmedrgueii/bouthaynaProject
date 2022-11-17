@@ -1,3 +1,9 @@
+@import "src/scss/atoms/title";
+
 .c-card {
-    background-color: darkgray;
+  background-color: darkgray;
+
+  .c-title {
+    color: red;
   }
+}

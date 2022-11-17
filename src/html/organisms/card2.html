@@ -4,7 +4,7 @@
 {% from 'atoms/paragraphe.html' import paragraphe %}
 
 {% macro card2(cardTitle, description = '', btnName = '', subTitle = '', lists = '', imageSrc = '') -%}
-    <div class="card-2" style="border: 1px solid red;">
+    <div class="c-card2">
         {{ title('h1', cardTitle) }} <br>
         {% if subTitle != '' %}
             {{ title('h2', 'subTitle') }} <br>

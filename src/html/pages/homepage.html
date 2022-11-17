@@ -7,13 +7,15 @@
 {% extends "layouts/layout.html" %}
 
 {% from 'atoms/title.html' import title %}
+{% from 'atoms/paragraphe.html' import paragraphe %}
 {% from 'organisms/card.html' import card %}
 {% from 'organisms/card2.html' import card2 %}
 
 {% block content %}
     <div id="content">
         <div class="container">
-            {{ title('h1', 'Hello World !!') }}
+            {{ title('h1', 'Confort4u') }}
+            {{ title('h6', 'Appartements for Ront') }}
             <div class="row">
                 {{ card('5 star service', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'gray', 'more') }}                
                 {{ card('even more choice', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'gray', 'more') }}

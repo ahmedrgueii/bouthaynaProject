@@ -14,9 +14,18 @@
     <div id="content">
         <div class="container">
             {{ title('h1', 'Hello World !!') }}
-
-            {{ card('title', 'description', 'red', 'button') }}
-            {{ card2('title', 'description', 'button', 'subTitle', ['1', '2']) }}
+            <div class="row">
+                {{ card('5 star service', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'gray', 'more') }}                
+                {{ card('even more choice', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'gray', 'more') }}
+                      {{ card('hottest vacation', 'Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.', 'gray', 'more') }}
+                
+            </div>
+            <div class="row">
+                <div class="col-md-3">
+                    {{ card2('title', 'description', 'button', 'subTitle', ['1', '2']) }}
+                </div>
+            </div>
+            
         </div>
     </div>
 {% endblock %}

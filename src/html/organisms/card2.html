@@ -5,29 +5,27 @@
 
 {% macro card2(cardTitle, description = '', btnName = '', subTitle = '', lists = '', imageSrc = '') -%}
     <div class="c-card2">
-        {{ title('h1', cardTitle) }} <br>
+        {{ title('h1', cardTitle) }}
         {% if subTitle != '' %}
-            {{ title('h2', 'subTitle') }} <br>
+            <h2>{{ subTitle }}</h2>
         {% endif %}
-
-        {% if image-src != '' %}
-            {{ image('image-src', 'rounded float-left') }} <br>
-        {% endif %}
-
-        {{ paragraphe(description) }} <br>
-
-        {{ button(btnName, 'btn btn-success') }} <br>
-
         {% if imageSrc != '' %}
-            {{ image(imageSrc, 'rounded float-left') }} <br>
+            {{ image(imageSrc, 'img-thumbnail float-left') }} <br>
         {% endif %}
 
+        {% if description != '' %}
+            {{ paragraphe(description) }} <br>
+        {% endif %}
+        
         {% if lists != '' %}
             <ul>
                 {% for list in lists %}
                     <li>{{ list }}</li>
                 {% endfor %}
             </ul>
+        {% endif %}
+        {% if btnName != '' %}
+            {{ button(btnName, 'btn btn-success') }} <br>
         {% endif %}
     </div>
 {%- endmacro %}

@@ -8,7 +8,7 @@
     color: black;
     text-align: left;
     padding-bottom: 20px;
-    font-size: 24px;
+    font-size: 16px;
     font-weight: bold;
     position: relative;
     &:after{
@@ -28,5 +28,12 @@
     background-color: gray;
     color: white;
     font-weight: bold ;
+  }
+  & h2 {
+    font-size: 14px;
+    font-weight: 500;
+    color:darkslateblue;
+    text-align: left;
+    text-transform: uppercase;
   }
 }

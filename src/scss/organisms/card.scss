@@ -1,4 +1,8 @@
 @import "src/scss/atoms/title";
+@import "src/scss/atoms/title";
+
+.c-card {
+  background-color: darkgray;
 
 .c-card {
   background-color: darkgray;
@@ -25,5 +29,9 @@
   }
   &:hover{
     background-color: rgb(99, 94, 94);
+  }
+}
+  .c-title {
+    color: red;
   }
 }
